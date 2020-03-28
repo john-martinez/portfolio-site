@@ -3,4 +3,6 @@
   display: inline-flex;
   height: 100%;
   width: 100vw;
+  transform: translateX(-100%);
+  &--normal { transform: translateX(0)}
 }
