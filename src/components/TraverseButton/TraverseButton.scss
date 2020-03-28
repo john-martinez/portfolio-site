@@ -1,0 +1,31 @@
+.traverse-button {
+  position: absolute;
+  * {
+    text-decoration: none;
+    color: black;
+  }
+  &__left {
+    @extend .traverse-button;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%) rotate(90deg);
+  }
+  &__right {
+    @extend .traverse-button;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  &__bottom {
+    @extend .traverse-button;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__top {
+    @extend .traverse-button;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
