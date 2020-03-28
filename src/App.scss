@@ -1,4 +1,4 @@
-* { box-sizing: border-box; scroll-behavior: smooth;  overflow: hidden; }
+* { box-sizing: border-box; scroll-behavior: smooth;  overflow: hidden; transition: .3s ease-in-out }
 
 body { 
   margin: 0;
@@ -6,7 +6,6 @@ body {
 }
 
 .app {
-  // width: 100vw;
   height: 100vh;
 
   &__inline-divs { 
