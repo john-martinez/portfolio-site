@@ -1,5 +1,5 @@
 import React from 'react';
-import TraverseButton from '../TraverseButton/TraverseButton';
+import TraverseButton from '../../components/TraverseButton/TraverseButton';
 import './Contact.scss';
 
 export default function Contact(props){

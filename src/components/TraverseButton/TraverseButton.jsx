@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './TraverseButton.scss';
 
 export default function TraverseButton({target, text, position, targetDiv, history}){

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LandingPage.scss';
-import TraverseButton from '../TraverseButton/TraverseButton';
+import TraverseButton from '../../components/TraverseButton/TraverseButton';
 
 export default class LandingPage extends Component {
   componentDidMount(){
