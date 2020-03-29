@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   &__title{
-    @include floating;
+    @include getIntoView;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +44,20 @@
       @extend .landing-page__bird;
       left: 143px;
       top: 55px;
+    }
+
+    &--flying {
+      @extend .landing-page__bird;
+      @include flyby;
+      position: absolute;
+      top: 20%;
+      transform: scaleX(-1);
+
+      &-bottom {
+        @extend .landing-page__bird--flying;
+        top: 70%;
+        left: 60%;
+      }
     }
   }
 

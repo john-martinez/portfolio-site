@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import TraverseButton from '../../components/TraverseButton/TraverseButton';
 import './LandingPage.scss';
 import cloud from '../../assets/images/cloud.png';
@@ -8,9 +8,7 @@ import rope from '../../assets/images/rope.png';
 
 export default function LandingPage(props){
   const landing = useRef();
-  useEffect(()=>{
-    //
-  })
+
   return (
     <section ref={landing} id="landing" className="landing-page">
       <TraverseButton text="CONTACT " target="/contact" position="bottom" targetDiv="#landing" history={props.history} />
@@ -20,6 +18,8 @@ export default function LandingPage(props){
       <img className="landing-page__cloud landing-page__cloud--right" src={cloud} alt="cloud"/>
       <img className="landing-page__cloud--bottom" src={cloud} alt="cloud"/>
       <img className="landing-page__cloud--bottom landing-page__cloud--right" src={cloud} alt="cloud"/>
+      <img className="landing-page__bird--flying" src={bird} alt="bird" />
+      <img className="landing-page__bird--flying-bottom" src={bird} alt="bird" />
       <div className="landing-page__title">
         <img className="landing-page__bird--left" src={bird} alt="bird" />
         <img className="landing-page__bird--right" src={bird} alt="bird" />

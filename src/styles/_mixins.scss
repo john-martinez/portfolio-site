@@ -1,16 +1,35 @@
 @import './animations';
 
 @mixin clouds {
-  animation-name: clouds;
-  animation-duration: 60s;
+  animation-name: moving;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   @content;
 }
 
+@mixin rising {
+  animation-name: rising;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
 @mixin floating {
   animation-name: floating;
   animation-duration: 5s;
+  animation-delay: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+}
+
+@mixin flyby {
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@mixin getIntoView {
+  animation: rising 6s ease-out, floating 5s ease-in-out 6s infinite;
 }

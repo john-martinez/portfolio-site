@@ -1,7 +1,11 @@
-@keyframes clouds {
-  from, 50%, to {transform: translateX(0)}
-  25% { transform: translateX(-150px) }
-  75% { transform: translateX(150px) }
+@keyframes moving {
+  from { transform: translateX(-100vw)}
+  to { transform: translateX(100vw) }
+}
+
+@keyframes rising {
+  from { transform: translateY(100vh) }
+  to { transform: translateY(0) }
 }
 
 @keyframes floating {
