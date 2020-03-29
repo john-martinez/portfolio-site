@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import TraverseButton from '../../components/TraverseButton/TraverseButton';
+import city from '../../assets/images/toronto.png';
+import IconBalloonContainer from '../../components/IconBallonContainer/IconBalloonContainer';
+
 import './Contact.scss';
 
 export default function Contact(props){
@@ -12,7 +15,8 @@ export default function Contact(props){
   return(
     <section id="contact" className={`contact ${didLoad ? 'contact--normal' : ''}`} ref={contact}>
       <TraverseButton position="top" text="MAINPAGE" target="/" targetDiv="#contact" history={props.history}/>
-      <h2>CONTACT ME</h2>
+      <img className="contact__background" src={city} alt="toronto skyline"/>
+      <IconBalloonContainer />
     </section>
   );
 }

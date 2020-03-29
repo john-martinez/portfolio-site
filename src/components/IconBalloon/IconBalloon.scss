@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+
+.icon-balloon {
+    @include floating{
+      animation-delay: 0;
+    };
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    height: auto;
+    width: 60px;
+    text-align: center;
+    > *:last-of-type { margin: -2px }
+  
+    &__icon {
+      width: 100%;
+      height: 100%;
+    }
+}

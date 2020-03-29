@@ -1,5 +1,6 @@
 @import './animations';
 
+// ANIMATIONS
 @mixin clouds {
   animation-name: moving;
   animation-duration: 30s;
@@ -21,6 +22,7 @@
   animation-delay: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  @content;
 }
 
 @mixin flyby {
@@ -33,3 +35,4 @@
 @mixin getIntoView {
   animation: rising 6s ease-out, floating 5s ease-in-out 6s infinite;
 }
+
