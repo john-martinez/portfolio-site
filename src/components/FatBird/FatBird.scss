@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+
+.fatbird {
+  width: 50px; 
+  height: auto;
+  position: relative;
+  top: -60px;
+  left: 15%;
+  &__img {  
+    width: 100%;
+    height: auto;
+  }
+  &__left-eye {
+    @include blink;
+    position: relative;
+    top: -70px;
+    left: 15px;
+    width: 7px;
+    height: auto;
+  }
+  &__right-eye {
+    @include blink;
+    position: relative;
+    top: -70px;
+    left: 19px;
+    width: 7px;
+    height: auto;
+  }
+}

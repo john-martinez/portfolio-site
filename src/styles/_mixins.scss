@@ -36,3 +36,10 @@
   animation: rising 6s ease-out, floating 5s ease-in-out 6s infinite;
 }
 
+@mixin blink {
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
