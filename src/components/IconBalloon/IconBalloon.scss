@@ -4,6 +4,7 @@
     @include floating{
       animation-delay: 0;
     };
+    transition: 3s linear;
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -11,10 +12,18 @@
     height: auto;
     width: 60px;
     text-align: center;
+    &--falling { 
+      top: 100vh !important;
+      transition: .3s linear;
+    }
     > *:last-of-type { margin: -2px }
   
-    &__icon {
+    &__balloon {
       width: 100%;
       height: 100%;
+      transition: 0s;
+      &--popped { 
+        filter: opacity(0);
+      }
     }
 }

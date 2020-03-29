@@ -7,10 +7,9 @@ import rope from '../../assets/images/rope.png';
 
 
 export default function LandingPage(props){
-  const landing = useRef();
 
   return (
-    <section ref={landing} id="landing" className="landing-page">
+    <section id="landing" className="landing-page">
       <TraverseButton text="CONTACT " target="/contact" position="bottom" targetDiv="#landing" history={props.history} />
       <TraverseButton text="PROJECTS" target="/projects" position="right" targetDiv="#landing" history={props.history} />
       <TraverseButton text="ABOUT ME" target="/about" position="left" targetDiv="#landing" history={props.history} />
