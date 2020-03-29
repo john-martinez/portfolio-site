@@ -13,7 +13,6 @@ export default function IconBalloon(props){
     popSound.play();
     balloon.classList.add("icon-balloon__balloon--popped");
     parent.classList.add("icon-balloon--falling");
-    props.addScore();
     setTimeout(()=>{
       balloon.classList.remove("icon-balloon__balloon--popped");
       parent.classList.remove("icon-balloon--falling");

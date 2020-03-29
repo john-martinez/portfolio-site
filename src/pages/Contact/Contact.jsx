@@ -7,18 +7,18 @@ import './Contact.scss';
 
 export default function Contact(props){
   const [didLoad, setDidLoad] = useState(false);
-  const [score, addScore] = useState(0);
+  // const [score, addScore] = useState(0);
   const contact = useRef();
-  const scoreHandler = () => addScore(score + 1);
+  // const scoreHandler = () => addScore(score + 1);
   useEffect(()=>{
     if (!didLoad) setTimeout(()=>setDidLoad(true),100);
   })
   return(
     <section id="contact" className={`contact ${didLoad ? 'contact--normal' : ''}`} ref={contact}>
-      <h2>POPPED: {score}</h2>
+      {/* <h2>POPPED: {score}</h2> */}
       <TraverseButton position="top" text="MAINPAGE" target="/" targetDiv="#contact" history={props.history}/>
       <img className="contact__background" src={city} alt="toronto skyline"/>
-      <IconBalloonContainer addScore={scoreHandler}/>
+      <IconBalloonContainer />
     </section>
   );
 }

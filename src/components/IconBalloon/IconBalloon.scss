@@ -1,9 +1,8 @@
 @import '../../styles/mixins';
 
 .icon-balloon {
-    @include floating{
-      animation-delay: 0;
-    };
+    @include floating;
+    animation-delay: 0 !important;
     transition: 3s linear;
     cursor: pointer;
     position: absolute;
