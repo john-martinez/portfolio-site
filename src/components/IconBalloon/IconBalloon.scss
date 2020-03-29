@@ -2,6 +2,7 @@
 
 .icon-balloon {
     @include floating;
+    overflow: visible;
     animation-delay: 0 !important;
     transition: 3s linear;
     cursor: pointer;

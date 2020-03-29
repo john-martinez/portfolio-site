@@ -32,9 +32,6 @@ export default function Projects(props){
           </div>
         </div>
       </section>
-      <section className="about-me__bio">
-
-      </section>
     </article>
   );
 }
