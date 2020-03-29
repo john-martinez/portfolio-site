@@ -1,0 +1,10 @@
+@keyframes clouds {
+  from, 50%, to {transform: translateX(0)}
+  25% { transform: translateX(-150px) }
+  75% { transform: translateX(150px) }
+}
+
+@keyframes floating {
+  from, to {transform: translateY(0)}
+  50% {transform: translateY(-10px)}
+}

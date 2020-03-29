@@ -1,4 +1,9 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .landing-page{
+  background-color: $bg-color1;
+  color: $font-color1;
   position: relative;
   width: 100vw;
   height: 100%;
@@ -6,10 +11,77 @@
   justify-content: center;
   align-items: center;
   &__title{
+    @include floating;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
     width: 100%;
+    height: 200px;
     text-align: center;
     &--name{
-      margin-bottom: 0;
+      margin: -5px;
+    }
+  }
+  &__subtitle { 
+    color: $font-color2;
+  }
+  
+  &__bird {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 50px;
+
+    &--left {
+      @extend .landing-page__bird;
+      top: 95px;
+      left: -138px;
+      transform: scaleX(-1);
+    }
+    &--right {
+      @extend .landing-page__bird;
+      left: 143px;
+      top: 55px;
+    }
+  }
+
+  &__rope {
+    position: relative;
+    top: 0;
+    width: 5px;
+    height: 30px;
+
+    &--left {
+      @extend .landing-page__rope;
+      top: 36px;
+      left: -125px;
+      transform: rotate(-30deg);
+    }
+    &--right {
+      @extend .landing-page__rope;
+      top: 10px;
+      left: 130px;
+      transform: rotate(30deg);
+    }
+  }
+  &__cloud { 
+    height: auto; 
+    width: 150px; 
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index:1;
+    @include clouds;
+
+    &--right {
+      top: 20%;
+      left: 50%;
+    }
+    &--bottom{
+      @extend .landing-page__cloud;
+      top: 70%;
     }
   }
 }

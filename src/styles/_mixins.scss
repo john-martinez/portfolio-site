@@ -1,0 +1,16 @@
+@import './animations';
+
+@mixin clouds {
+  animation-name: clouds;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @content;
+}
+
+@mixin floating {
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}

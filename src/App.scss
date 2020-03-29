@@ -1,12 +1,9 @@
-* { box-sizing: border-box; scroll-behavior: smooth;  overflow: hidden; transition: .3s ease-in-out }
-
-body { 
-  margin: 0;
-  padding: 0;
-}
+@import './styles/variables';
 
 .app {
   height: 100vh;
+  background-color: $bg-color1;
+  color: $font-color1;
 
   &__inline-divs { 
     display: flex;
