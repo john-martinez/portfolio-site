@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import TraverseButton from '../../components/TraverseButton/TraverseButton';
 import './LandingPage.scss';
 import cloud from '../../assets/images/cloud.png';

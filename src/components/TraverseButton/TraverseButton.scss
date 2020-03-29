@@ -1,11 +1,15 @@
+@import '../../styles/variables';
 .traverse-button {
   position: absolute;
   cursor: pointer;
+  
   z-index: 100;
   * {
     text-decoration: none;
-    color: black;
+    color: $font-color2;
   }
+
+  &__text:hover { color: $hovered }
   &__left {
     @extend .traverse-button;
     top: 50%;
