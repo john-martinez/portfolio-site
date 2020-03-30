@@ -11,7 +11,7 @@ export default function Projects(props){
   const about = useRef();
 
   useEffect(()=>{
-    if (!didLoad) setTimeout(()=>setDidLoad(true),100);
+    if (!didLoad) setDidLoad(true);
     if (!testimonials.length){
       axios.get('https://cors-anywhere.herokuapp.com/https://johnraymartinez.herokuapp.com/api/testimonials')
       .then(data=>setTestimonials(data.data))
@@ -31,6 +31,9 @@ export default function Projects(props){
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum nisi tenetur corporis sapiente, incidunt eos non quidem nam tempore laborum, voluptatibus laudantium autem fugit libero. Iure recusandae fuga perferendis quam.
           </div>
         </div>
+      </section>
+      <section className="about-me__testimonials">
+
       </section>
     </article>
   );
