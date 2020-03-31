@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 .about-me{
-  overflow: visible;
+  overflow: scroll;
   position: relative;
   width: 100vw;
   transform: translateX(-100%);
@@ -35,22 +35,7 @@
 
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: $bg-color3;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $bg-color2;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.bigdiv {
+  height: 100vh;
+  width: 100%;
 }

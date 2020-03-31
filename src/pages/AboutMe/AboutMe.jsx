@@ -28,9 +28,12 @@ export default function Projects(props){
             <img className="about-me__img" src={myPic} alt="handsome young man"/>
           </div>
           <div className="about-me__bio-blurb">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum nisi tenetur corporis sapiente, incidunt eos non quidem nam tempore laborum, voluptatibus laudantium autem fugit libero. Iure recusandae fuga perferendis quam.
+            Hi! My name is John Ray and I am a Web Developer. I enjoy and love programming in general but during the past year, I was attracted to Web Development and decided to pursue it as a career.
           </div>
         </div>
+      </section>
+      <section className="bigdiv">
+asdasdassaddsa
       </section>
     </article>
   );
