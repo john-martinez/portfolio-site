@@ -11,7 +11,7 @@ export default function Projects(props){
   const about = useRef();
 
   useEffect(()=>{
-    if (!didLoad) setTimeout(()=>setDidLoad(true),100);
+    if (!didLoad) setDidLoad(true);
     if (!testimonials.length){
       axios.get('https://cors-anywhere.herokuapp.com/https://johnraymartinez.herokuapp.com/api/testimonials')
       .then(data=>setTestimonials(data.data))
@@ -32,8 +32,8 @@ export default function Projects(props){
           </div>
         </div>
       </section>
-      <section className="bigdiv">
-asdasdassaddsa
+      <section className="about-me__testimonials">
+
       </section>
     </article>
   );
