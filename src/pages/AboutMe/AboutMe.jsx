@@ -38,13 +38,9 @@ export default function Projects(props){
             <div className="about-me__bio-blurb">
               Hi! My name is John Ray and I am a Web Developer. I enjoy and love programming in general but during the past year, I was attracted to Web Development and decided to pursue it as a career.
             </div>
-        </div>
-        
+        </div> 
       : <></>
       }
-      </section>
-      <section className="about-me__testimonials">
-
       </section>
       <TraverseButton position="right" text="MAINPAGE" target="/" targetDiv="#aboutMe" history={props.history}/>
     </main> 
