@@ -1,5 +1,7 @@
 .speech-bubble {
+  position: relative;
   transition: .2s ease-in-out;
+  z-index: 10;
   display: inline-block;
   border-radius: 5px;
   background-color: white;
@@ -19,6 +21,11 @@
     top: 9px;
     left: 55px;
     transform: rotate(45deg)
+  }
+  &__button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
   }
   &__blurb{
     &-message {
