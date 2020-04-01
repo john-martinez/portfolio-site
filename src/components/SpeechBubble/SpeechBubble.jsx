@@ -23,9 +23,9 @@ export default function SpeechBubble({speech}){
     <div className="speech-bubble">
       <div className="speech-bubble__blurb">
         <span>{`${speech[line].author} ${speech[line].company ? ' from ' + speech[line].company : ''} said: `}</span>
-        <h5>{`"${speech[line].headline}`}</h5>
+        <h5>{`${speech[line].headline}`}</h5>
         <p className="speech-bubble__blurb-message">
-          {`${speech[line].message}"`}
+          {`"${speech[line].message}"`}
         </p>
         <button onClick={getPreviousMessage}>prev</button>
         <button onClick={getNextMessage}>next</button>
