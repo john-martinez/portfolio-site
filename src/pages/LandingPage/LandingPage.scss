@@ -2,6 +2,7 @@
 @import '../../styles/mixins';
 
 .landing-page{
+  overflow: hidden;
   background-color: $bg-color1;
   color: $font-color1;
   position: relative;
@@ -26,7 +27,6 @@
     }
   }
   &__subtitle { color: $font-color2 }
-  
   &__bird {
     position: relative;
     top: 0;
@@ -44,22 +44,7 @@
       left: 143px;
       top: 55px;
     }
-
-    &--flying {
-      @extend .landing-page__bird;
-      @include flyby;
-      position: absolute;
-      top: 20%;
-      transform: scaleX(-1);
-
-      &-bottom {
-        @extend .landing-page__bird--flying;
-        top: 70%;
-        left: 60%;
-      }
-    }
   }
-
   &__rope {
     position: relative;
     top: 0;
@@ -77,24 +62,6 @@
       top: 10px;
       left: 130px;
       transform: rotate(30deg);
-    }
-  }
-  &__cloud { 
-    height: auto; 
-    width: 150px; 
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    z-index:1;
-    @include clouds;
-
-    &--right {
-      top: 20%;
-      left: 50%;
-    }
-    &--bottom{
-      @extend .landing-page__cloud;
-      top: 70%;
     }
   }
 }
