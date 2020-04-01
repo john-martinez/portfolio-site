@@ -12,33 +12,42 @@ export default function Projects(props){
   useEffect(()=>{
     if (!testimonials.length){
       axios.get('https://cors-anywhere.herokuapp.com/https://johnraymartinez.herokuapp.com/api/testimonials')
-      .then(data=>setTestimonials(data.data))
+      .then(data=>{
+        let newData = data.data;
+        newData.shift()
+        setTestimonials(newData);
+      })
       .catch(err=>console.log(err))
     }
   }, [testimonials.length])
 
   useEffect(()=>{
     if (!didLoad)
-      setDidLoad(true);
+      setTimeout(()=>setDidLoad(true),200);
   }, [didLoad])
 
-  return(
-    <article id="aboutMe" className={`about-me ${didLoad ? 'about-me--normal' : ''}`} >
-      <TraverseButton position="right" text="MAINPAGE" target="/" targetDiv="#aboutMe" history={props.history}/>
-      <section className="about-me__bio">
-        <div className="about-me__box">
-          <FatBird />
-          <div className="about-me__img-container">
-            <img className="about-me__img" src={myPic} alt="handsome young man"/>
-          </div>
-          <div className="about-me__bio-blurb">
-            Hi! My name is John Ray and I am a Web Developer. I enjoy and love programming in general but during the past year, I was attracted to Web Development and decided to pursue it as a career.
-          </div>
+  return (
+    <main id="aboutMe" className="about-me" >
+      <section className={`about-me__bio  ${didLoad ? 'about-me__bio--normal' : ''}`}>
+      {testimonials.length  
+      ? <div className="about-me__box">
+            <FatBird speech={testimonials} />
+            <div className="about-me__img-container">
+              <img className="about-me__img" src={myPic} alt="handsome young man"/>
+            </div>
+            <div className="about-me__bio-blurb">
+              Hi! My name is John Ray and I am a Web Developer. I enjoy and love programming in general but during the past year, I was attracted to Web Development and decided to pursue it as a career.
+            </div>
         </div>
+        
+      : <></>
+      }
       </section>
       <section className="about-me__testimonials">
-      
+
       </section>
-     </article> 
-  );
+      <TraverseButton position="right" text="MAINPAGE" target="/" targetDiv="#aboutMe" history={props.history}/>
+    </main> 
+  )
+
 }

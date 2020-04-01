@@ -4,9 +4,9 @@
   border-radius: 5px;
   background-color: white;
   position: absolute;
-  min-width: 125px;
+  width: 80vw;
   bottom: 100px;
-  left: 10px;
+  left: -50px;
   padding: 5px;
   &--hidden { filter: opacity(0) }
   &__arrow {
@@ -17,7 +17,13 @@
     width: 10px;
     position: relative;
     top: 9px;
-    left: 1px;
+    left: 55px;
     transform: rotate(45deg)
+  }
+  &__blurb{
+    &-message {
+      font-size: .8rem;
+      font-style: italic;
+    }
   }
 }
