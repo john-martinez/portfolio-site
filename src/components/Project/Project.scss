@@ -1,0 +1,26 @@
+.project {
+  height: 150px;
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+  margin: 10px 0;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &__left {
+    width: 40%;
+    height: 100%;
+  }
+  &__right { 
+    flex-grow: 1;
+    padding: 5px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+}
