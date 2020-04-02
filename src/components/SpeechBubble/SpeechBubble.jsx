@@ -10,7 +10,7 @@ export default function SpeechBubble({speech, handler}){
       }, 10000)
       return () => clearInterval(intervalId)
     }
-  },[line, speech.length])
+  },[line, speech.length,speech])
 
   const getPreviousMessage = () => {
     if (line) setLine(line-1);

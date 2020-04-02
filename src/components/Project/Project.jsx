@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import Modal from 'react-modal';
-import pic from '../../assets/images/fatbird.png';
 import './Project.scss';
 
 export default function Project({project}){
