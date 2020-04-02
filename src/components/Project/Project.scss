@@ -37,6 +37,7 @@
     }
     &-subtitle { text-align: center }
   }
+  &__tech { font-size: 1.5rem }
   &__carousel {
     width: 100%;
     &-item {
@@ -49,4 +50,9 @@
     }
   }
   &__tech { margin: 0 5px }
+  &__blurb { 
+    display: block;
+    margin: 5px 0; 
+    width: 100%; 
+  }
 }
