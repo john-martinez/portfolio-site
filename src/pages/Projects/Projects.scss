@@ -4,7 +4,6 @@
   position: relative;
   width: 100vw;
   transform: translateX(100%);
-  background-color: $bg-color2;
 
   &__hero { 
     position: relative;
@@ -43,5 +42,14 @@
   &--normal { transform: translateX(0)}
   &__title {
     margin: 0;
+  }
+  &__showcase { 
+    background-color: #120a12;
+    overflow: hidden;
+    &-title {
+      color: white;
+      font-size: 3rem;
+      text-align: center;
+    }
   }
 }
