@@ -3,10 +3,34 @@
 .projects{
   position: relative;
   width: 100vw;
-  height: 100%;
   transform: translateX(100%);
   background-color: $bg-color2;
 
+  &__hero { 
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+    background-image: url('../../assets/images/bg-proj.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    &-title {
+      color: white;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%)
+    }
+  }
   &__container {
     display: flex;
     flex-flow: column;

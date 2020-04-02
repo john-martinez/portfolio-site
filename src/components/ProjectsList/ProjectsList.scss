@@ -1,4 +1,10 @@
+@import '../../styles/mixins';
 .projects-list {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 3%;
+  @include tablet {
+    flex-direction: row;
+  }
 }

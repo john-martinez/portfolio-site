@@ -13,11 +13,12 @@ export default function Projects(props){
 
   return(
     <section id="projects" className={`projects ${didLoad ? 'projects--normal' : ''}`}>
-      <div className="projects__container">
-        <ProjectsList />
-        
+      <div className="projects__hero">
+        <div className="projects__hero-overlay">
+          <h1 className="projects__hero-title">REDESIGNED</h1>
+        </div>
       </div>
-      
+      <ProjectsList />   
       <TraverseButton text="MAINPAGE" position="left" target="/" targetDiv="#projects" history={props.history}/>
     </section>
   );
