@@ -2,6 +2,8 @@
 .projects-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 100%;
   padding: 3%;
   @include tablet {

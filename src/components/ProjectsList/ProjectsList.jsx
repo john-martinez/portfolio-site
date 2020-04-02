@@ -37,6 +37,28 @@ export default function ProjectsList(){
       ],
       link: "https://bttweather.netlify.com/",
       photos: [bttw1,bttw2,bttw3]
+    },
+    {
+      name: "BetterThanTheWeather",
+      description: "A dashboard app that shows your local time and changes the background depending on the weather and time in your area",
+      tech: [
+        <FontAwesomeIcon icon={faNode}/>, 
+        <FontAwesomeIcon icon={faReact}/>, 
+        <FontAwesomeIcon icon={faSass}/>
+      ],
+      link: "https://bttweather.netlify.com/",
+      photos: [bttw1,bttw2,bttw3]
+    },
+    {
+      name: "BetterThanTheWeather",
+      description: "A dashboard app that shows your local time and changes the background depending on the weather and time in your area",
+      tech: [
+        <FontAwesomeIcon icon={faNode}/>, 
+        <FontAwesomeIcon icon={faReact}/>, 
+        <FontAwesomeIcon icon={faSass}/>
+      ],
+      link: "https://bttweather.netlify.com/",
+      photos: [bttw1,bttw2,bttw3]
     }
   ]
   return(
