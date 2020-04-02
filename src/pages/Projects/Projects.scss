@@ -44,9 +44,12 @@
     margin: 0;
   }
   &__showcase { 
-    background-color: #120a12;
     overflow: hidden;
     &-title {
+      margin: 0;
+      font-size: 1.8rem;
+      padding: 10px;
+      background-color: #120a12;
       color: white;
       font-size: 3rem;
       text-align: center;

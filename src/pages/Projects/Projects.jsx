@@ -14,6 +14,7 @@ export default function Projects(props){
   return(
     <article id="projects" className={`projects ${didLoad ? 'projects--normal' : ''}`}>
       <div className="projects__hero">
+        <div className="projects__hero-img"></div>
         <div className="projects__hero-overlay">
           <h1 className="projects__hero-title">REDESIGNED</h1>
         </div>

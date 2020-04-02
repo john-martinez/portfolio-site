@@ -1,12 +1,16 @@
 @import '../../styles/mixins';
 .projects-list {
+  background-image: url('../../assets/images/bg2.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   padding: 3%;
   @include tablet {
     flex-direction: row;
+    justify-content: space-evenly;
   }
 }
