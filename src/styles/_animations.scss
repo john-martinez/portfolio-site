@@ -22,3 +22,10 @@
   from {filter: opacity(0)}
   to {filter: opacity(1)}
 }
+
+@keyframes move {
+  from,to {transform: translate(-12.5%,-35%);}
+  25% {transform: translate(-15%,-30%);}
+  50% {transform: translate(-12%,-40%);}
+  75% {transform: translate(-5%,-25%);}
+}

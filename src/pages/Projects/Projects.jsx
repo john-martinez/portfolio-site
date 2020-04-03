@@ -25,14 +25,13 @@ export default function Projects(props){
             <span className="projects__fade-in projects__fade-in-1">C</span>
             <span className="projects__fade-in projects__fade-in-3">T</span>
             <span className="projects__fade-in projects__fade-in-2">S</span>
+          <div className="projects__hero-circle"></div>
           </h1>
         </div>
       </div>
       <section className="projects__showcase">
-        <div className="projects__next"></div>
         <ProjectsList />   
       </section>
-      <TraverseButton text="MAINPAGE" position="left" target="/" targetDiv="#projects" history={props.history}/>
     </article>
   );
 }
