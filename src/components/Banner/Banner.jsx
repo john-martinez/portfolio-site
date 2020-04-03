@@ -3,7 +3,6 @@ import { withRouter, Link } from 'react-router-dom';
 import './Banner.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faHome, faAddressCard, faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../assets/images/logo.png';
 import logoWhite from '../../assets/images/logo-white.png';
 
 export default withRouter(function Banner(props){
