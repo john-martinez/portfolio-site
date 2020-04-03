@@ -32,6 +32,7 @@ export default function Projects(props){
       <section className="projects__showcase">
         <ProjectsList />   
       </section>
+      <TraverseButton targetDiv="#projects" text="MAINPAGE" position="left" target="/" history={props.history} />
     </article>
   );
 }
