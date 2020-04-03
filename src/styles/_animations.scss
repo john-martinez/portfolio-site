@@ -33,9 +33,33 @@
   to { background-color: purple }
 }
 
+@keyframes fill2 {
+  from {}
+  to { background-color: lightgreen }
+}
+
+@keyframes fill3 {
+  from {}
+  to { background-color: lightblue }
+}
+
 @keyframes move {
   from,to {transform: translate(-12.5%,-35%);}
   25% {transform: translate(-15%,-30%);}
   50% {transform: translate(-12%,-40%);}
   75% {transform: translate(-5%,-25%);}
+}
+
+@keyframes move2 {
+  from,to {}
+  25% {transform: translate(10%, 10%);}
+  50% {transform: translate(-3%,5%);}
+  75% {transform: translate(-5%,3%);}
+}
+
+@keyframes move3 {
+  from,to {}
+  25% {transform: translate(-100px,-200px);}
+  50% {transform: translate(-75px, -175px);}
+  75% {transform: translate(-50px,-150px)}
 }

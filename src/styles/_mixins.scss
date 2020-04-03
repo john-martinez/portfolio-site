@@ -57,6 +57,22 @@
   animation-iteration-count: infinite;
   animation: move 10s linear infinite 3s, fadein2 2s forwards 1s, fill 3s forwards 3s;
 }
+
+@mixin move2 {
+  animation-name: move2;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation: move2 10s linear infinite 3s, fadein2 2s forwards 1s, fill2 3s forwards 3s;
+}
+
+@mixin move3 {
+  animation-name: move3;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation: move3 10s linear infinite 3s, fadein2 2s forwards 1s, fill3 3s forwards 3s;
+}
 // breakpoints
 
 @mixin tablet {

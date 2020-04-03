@@ -26,6 +26,8 @@ export default function Projects(props){
             <span className="projects__fade-in projects__fade-in-7">T</span>
             <span className="projects__fade-in projects__fade-in-8">S</span>
           <div className="projects__hero-circle"></div>
+          <div className="projects__hero-circle-2"></div>
+          <div className="projects__hero-circle-3"></div>
           </h1>
         </div>
       </div>

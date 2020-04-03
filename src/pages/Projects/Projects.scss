@@ -17,8 +17,10 @@
     &-6{ @include fadeIn{ animation-delay: 3.5s } }
     &-8{ @include fadeIn{ animation-delay: 3.75s } }
     &-5{ @include fadeIn{ animation-delay: 4s } }
+
   }
   &__hero { 
+    overflow: hidden;
     position: relative;
     height: 100vh; 
     width: 100%;
@@ -38,6 +40,20 @@
       transform: translate(-12.5%,-35%);
       z-index: -1;
       @include move;
+      &-2 {
+        @extend .projects__hero-circle;
+        @include move2;
+        top: 20%;
+        left: 20%;
+        border: 1px solid lightgreen;
+      }
+      &-3 {
+        @extend .projects__hero-circle;
+        @include move3;
+        top: 10%;
+        left: 50%;
+        border: 1px solid lightblue;
+      }
     }
     &-overlay {
       position: absolute;
@@ -84,6 +100,12 @@
       color: white;
       font-size: 3rem;
       text-align: center;
+    }
+  }
+
+  @include tablet {
+    &__fade-in {
+      font-size: 6rem;
     }
   }
 }
