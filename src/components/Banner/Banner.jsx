@@ -11,6 +11,7 @@ export default withRouter(function Banner(props){
   switch (props.location.pathname) {
     case '/': 
     case '/contact': bannerColor='banner--blue';
+      break;
   }
   return(
     <header className={`banner ${bannerColor}`}>
