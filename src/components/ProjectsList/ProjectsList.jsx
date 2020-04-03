@@ -17,7 +17,7 @@ export default function ProjectsList(){
   let projects = [
     {
       name: "Süber",
-      description: "An arcade driving game that punishes players for falling asleep or getting drunk in game",
+      description: "An arcade driving game that punishes players for falling asleep or getting drunk in game. An effort to raise awareness on DUI",
       tech: [
         <FontAwesomeIcon icon={faNode}/>, 
         <FontAwesomeIcon icon={faReact}/>, 

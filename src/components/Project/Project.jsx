@@ -28,8 +28,8 @@ export default function Project({project}){
         <strong className="project__title">{project.name}</strong> <br/>
         <span className="project__blurb">{project.description}</span> <br/>
         {project.tech.map((item,i)=><span key={i} className="project__tech">{item}</span>)} <br/>
-        <button onClick={linkHandler}>Site</button>
-          {project.demoLink ? <button onClick={demoHandler}>Watch Demo</button> : '' }
+        <button className="project__button" onClick={linkHandler}>SITE</button>
+          {project.demoLink ? <button className="project__button--blue" onClick={demoHandler}>DEMO REEL</button> : '' }
       </div>    
     </div>
   );

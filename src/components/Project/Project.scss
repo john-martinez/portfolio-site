@@ -1,6 +1,9 @@
 @import '../../styles/mixins';
 
 .project {
+  transition: .2s;
+  outline: none;
+  border: none;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -9,7 +12,7 @@
   min-width: 300px;
   border: 1px solid black;
   background-color: #fafafa;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.2);
   margin: 10px 3px;
   cursor: pointer;
   &:hover {
@@ -58,8 +61,25 @@
     margin: 5px 0; 
     width: 100%; 
   }
-  @include tablet {
-
+  &__button {
+    background-color: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-right: 5px;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: purple;
+    border: 1px solid purple;
+    color: white;
+    &:hover { background-color: unset; color: orange; border: 1px solid orange }
+    &--blue {
+      @extend .project__button;
+      color: purple;
+      border: 1px solid purple;
+      background-color: unset;
+    }
   }
 }
 
