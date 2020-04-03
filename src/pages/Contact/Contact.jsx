@@ -13,7 +13,6 @@ export default function Contact(props){
   })
   return(
     <section id="contact" className={`contact ${didLoad ? 'contact--normal' : ''}`} ref={contact}>
-      <TraverseButton position="top" text="MAINPAGE" target="/" targetDiv="#contact" history={props.history}/>
       <img className="contact__background" src={city} alt="toronto skyline"/>
       <IconBalloonContainer />
     </section>

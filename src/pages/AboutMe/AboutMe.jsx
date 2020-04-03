@@ -54,7 +54,6 @@ export default function Projects(props){
         <img className="sky__cloud" src={cloud} alt="cloud"/>
         <img className="sky__cloud sky__cloud--right" src={cloud} alt="cloud"/>
       </>)}
-      <TraverseButton position="right" text="MAINPAGE" target="/" targetDiv="#aboutMe" history={props.history}/>
     </main> 
   )
 
