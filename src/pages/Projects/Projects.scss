@@ -43,6 +43,7 @@
       &-2 {
         @extend .projects__hero-circle;
         @include move2;
+        visibility: hidden;
         top: 20%;
         left: 20%;
         border: 1px solid lightgreen;
@@ -50,6 +51,7 @@
       &-3 {
         @extend .projects__hero-circle;
         @include move3;
+        visibility: hidden;
         top: 10%;
         left: 50%;
         border: 1px solid lightblue;
@@ -106,6 +108,10 @@
   @include tablet {
     &__fade-in {
       font-size: 6rem;
+    }
+    &__hero-circle-2,
+    &__hero-circle-3 {
+      visibility: visible;
     }
   }
 }
