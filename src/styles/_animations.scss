@@ -17,3 +17,8 @@
   0%, 10% {height: auto}
   5% {height: 1px}
 }
+
+@keyframes fadein {
+  from {filter: opacity(0)}
+  to {filter: opacity(1)}
+}

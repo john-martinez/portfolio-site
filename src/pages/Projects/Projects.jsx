@@ -16,11 +16,20 @@ export default function Projects(props){
       <div className="projects__hero">
         <div className="projects__hero-img"></div>
         <div className="projects__hero-overlay">
-          <h1 className="projects__hero-title">REDESIGNED</h1>
+          <h1 className="projects__hero-title">
+            <span className="projects__fade-in projects__fade-in-1">P</span>
+            <span className="projects__fade-in projects__fade-in-3">R</span>
+            <span className="projects__fade-in projects__fade-in-2">O</span>
+            <span className="projects__fade-in projects__fade-in-1">J</span>
+            <span className="projects__fade-in projects__fade-in-3">E</span>
+            <span className="projects__fade-in projects__fade-in-1">C</span>
+            <span className="projects__fade-in projects__fade-in-3">T</span>
+            <span className="projects__fade-in projects__fade-in-2">S</span>
+          </h1>
         </div>
       </div>
       <section className="projects__showcase">
-        <h2 className="projects__showcase-title">PROJECTS</h2>
+        <div className="projects__next"></div>
         <ProjectsList />   
       </section>
       <TraverseButton text="MAINPAGE" position="left" target="/" targetDiv="#projects" history={props.history}/>

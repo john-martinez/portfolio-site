@@ -1,10 +1,18 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .projects{
   position: relative;
   width: 100vw;
   transform: translateX(100%);
 
+  &__fade-in {
+    filter: opacity(0);
+    font-size: 3rem;
+    &-1{ @include fadeIn }
+    &-2{ @include fadeIn{ animation-delay: 1s } }
+    &-3{ @include fadeIn{ animation-delay: 2s } }
+  }
   &__hero { 
     position: relative;
     height: 100vh; 
@@ -39,6 +47,11 @@
     width: 100%;
     height: 100%;
   }
+  &__next {
+    height: 150px;
+    width: 100%;
+    background-color: #120a12;
+  }
   &--normal { transform: translateX(0)}
   &__title {
     margin: 0;
@@ -49,7 +62,7 @@
       margin: 0;
       font-size: 1.8rem;
       padding: 10px;
-      background-color: #120a12;
+      
       color: white;
       font-size: 3rem;
       text-align: center;

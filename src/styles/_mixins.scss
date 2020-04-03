@@ -42,6 +42,14 @@
   animation-iteration-count: infinite;
 }
 
+@mixin fadeIn {
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  @content;
+}
+
 // breakpoints
 
 @mixin tablet {
