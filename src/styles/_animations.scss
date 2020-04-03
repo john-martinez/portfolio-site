@@ -23,6 +23,16 @@
   to {filter: opacity(1)}
 }
 
+@keyframes fadein2 {
+  from {filter: opacity(0)}
+  to {filter: opacity(0.5);}
+}
+
+@keyframes fill {
+  from {}
+  to { background-color: purple }
+}
+
 @keyframes move {
   from,to {transform: translate(-12.5%,-35%);}
   25% {transform: translate(-15%,-30%);}

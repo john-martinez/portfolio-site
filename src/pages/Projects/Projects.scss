@@ -9,9 +9,14 @@
   &__fade-in {
     filter: opacity(0);
     font-size: 3rem;
-    &-1{ @include fadeIn; }
-    &-2{ @include fadeIn{ animation-delay: 1s } }
-    &-3{ @include fadeIn{ animation-delay: 2s } }
+    &-1{ @include fadeIn{ animation-delay: 2.25s } }
+    &-4{ @include fadeIn{ animation-delay: 2.50s } }
+    &-7{ @include fadeIn{ animation-delay: 2.75s } }
+    &-2{ @include fadeIn{ animation-delay: 3s } }
+    &-3{ @include fadeIn{ animation-delay: 3.25s } }
+    &-6{ @include fadeIn{ animation-delay: 3.5s } }
+    &-8{ @include fadeIn{ animation-delay: 3.75s } }
+    &-5{ @include fadeIn{ animation-delay: 4s } }
   }
   &__hero { 
     position: relative;
@@ -28,8 +33,7 @@
       height: 300px;
       width: 300px;
       border: 1px solid purple;
-      background-color: purple;
-      filter: opacity(0.5);
+      filter: opacity(0);
       border-radius: 100%;
       transform: translate(-12.5%,-35%);
       z-index: -1;

@@ -18,13 +18,13 @@ export default function Projects(props){
         <div className="projects__hero-overlay">
           <h1 className="projects__hero-title">
             <span className="projects__fade-in projects__fade-in-1">P</span>
-            <span className="projects__fade-in projects__fade-in-3">R</span>
-            <span className="projects__fade-in projects__fade-in-2">O</span>
-            <span className="projects__fade-in projects__fade-in-1">J</span>
-            <span className="projects__fade-in projects__fade-in-3">E</span>
-            <span className="projects__fade-in projects__fade-in-1">C</span>
-            <span className="projects__fade-in projects__fade-in-3">T</span>
-            <span className="projects__fade-in projects__fade-in-2">S</span>
+            <span className="projects__fade-in projects__fade-in-2">R</span>
+            <span className="projects__fade-in projects__fade-in-3">O</span>
+            <span className="projects__fade-in projects__fade-in-4">J</span>
+            <span className="projects__fade-in projects__fade-in-5">E</span>
+            <span className="projects__fade-in projects__fade-in-6">C</span>
+            <span className="projects__fade-in projects__fade-in-7">T</span>
+            <span className="projects__fade-in projects__fade-in-8">S</span>
           <div className="projects__hero-circle"></div>
           </h1>
         </div>
