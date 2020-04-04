@@ -64,4 +64,29 @@
       transform: rotate(30deg);
     }
   }
+  @include tablet {
+    &__title { &--name { font-size: 4rem } }
+    &__subtitle { font-size: 2rem }
+    &__rope {
+      &--left {
+        top: 50px;
+        left: -325px;
+      }
+      &--right {
+        top: 20px;
+        left: 339px;
+      }
+    }
+    &__bird { 
+      width: 75px;
+      &--left { 
+        top: 140px;
+        left: -340px;
+      }
+      &--right {  
+        top: 75px;
+        left: 352px;
+      }
+    }
+  }
 }
