@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import PacmanLoader from "react-spinners/PacmanLoader";
 import myPic from '../../assets/images/me.jpg';
 import FatBird from '../../components/FatBird/FatBird';
 import cloud from '../../assets/images/cloud.png';
@@ -36,7 +37,7 @@ export default function Projects(props){
   return (
     <main id="aboutMe" className="about-me">
       <section className={`about-me__bio  ${didLoad ? 'about-me__bio--normal' : ''} ${clicked ? 'about-me__bio--bottom' : ''}`}>
-      {testimonials.length  
+      {testimonials.length
       ? <div className="about-me__box">
             <FatBird handler={showTestimonials} speech={clicked ? testimonials : "Hello there! Want to see what people say about me?"} />
             <div className="about-me__img-container">
@@ -46,7 +47,7 @@ export default function Projects(props){
               {retrieveBlurb()}
             </div>
         </div> 
-      : <></>
+      : <div className="about-me__loader"><PacmanLoader color="white" /></div>
       }
       </section>
       <>

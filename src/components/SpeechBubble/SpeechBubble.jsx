@@ -9,7 +9,7 @@ export default function SpeechBubble({speech, handler}){
     if (typeof speech !== "string"){
       const intervalId = setInterval(()=>{
         line === speech.length-1 ? setLine(0) : setLine(line+1);
-      }, 10000)
+      }, 20000)
       return () => clearInterval(intervalId)
     }
   },[line, speech.length,speech])
