@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import TraverseButton from '../../components/TraverseButton/TraverseButton';
 import myPic from '../../assets/images/me.jpg';
 import FatBird from '../../components/FatBird/FatBird';
 import cloud from '../../assets/images/cloud.png';
@@ -50,10 +49,10 @@ export default function Projects(props){
       : <></>
       }
       </section>
-      {clicked && (<>
+      <>
         <img className="sky__cloud" src={cloud} alt="cloud"/>
         <img className="sky__cloud sky__cloud--right" src={cloud} alt="cloud"/>
-      </>)}
+      </>
     </main> 
   )
 

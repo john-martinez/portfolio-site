@@ -1,25 +1,25 @@
 @import '../../styles/mixins';
 
 .sky {
-    &__bird {
-        position: relative;
-        top: 0;
-        height: auto;
-        width: 50px;
-        &--flying {
-          @extend .sky__bird;
-          @include flyby;
-          position: absolute;
-          top: 20%;
-          transform: scaleX(-1);
-    
-          &-bottom {
-            @extend .sky__bird--flying;
-            top: 70%;
-            left: 60%;
-          }
-        }
+  &__bird {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 50px;
+    &--flying {
+      @extend .sky__bird;
+      @include flyby;
+      position: absolute;
+      top: 20%;
+      transform: scaleX(-1);
+
+      &-bottom {
+        @extend .sky__bird--flying;
+        top: 70%;
+        left: 60%;
+      }
     }
+  }
 
   &__cloud { 
     height: auto; 
@@ -27,7 +27,7 @@
     position: absolute;
     top: 15%;
     left: 15%;
-    z-index:1;
+    z-index: -100;
     @include clouds;
 
     &--right {

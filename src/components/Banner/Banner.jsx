@@ -7,11 +7,7 @@ import logoWhite from '../../assets/images/logo-white.png';
 
 export default withRouter(function Banner(props){
   let bannerColor = '';
-  switch (props.location.pathname) {
-    case '/': 
-    case '/contact': bannerColor='banner--blue';
-      break;
-  }
+  if (props.location.pathname!=='/projects') bannerColor = 'banner--blue';
   return(
     <header className={`banner ${bannerColor}`}>
       <div className={`banner__logo-container ${props.location.pathname === '/' ? '' : `banner__logo-container--right`}`}>
