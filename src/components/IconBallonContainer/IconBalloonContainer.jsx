@@ -2,7 +2,6 @@ import React from 'react';
 import IconBalloon from '../IconBalloon/IconBalloon';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeSquare, faFileDownload } from '@fortawesome/free-solid-svg-icons';
-import cloud from '../../assets/images/cloud.png';
 import './IconBalloonContainer.scss';
 
 export default function IconBalloonContainer(props) {
@@ -16,7 +15,6 @@ export default function IconBalloonContainer(props) {
       <IconBalloon icon={faLinkedin} handler={linkedInHandler} />
       <IconBalloon icon={faEnvelopeSquare} handler={emailHandler} />
       <IconBalloon icon={faFileDownload} handler={resumeHandler} />
-      <img className="icon-balloon-container__bg" src={cloud} alt="cloud"/>
     </div>
 
   );

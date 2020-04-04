@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import city from '../../assets/images/toronto.png';
 import IconBalloonContainer from '../../components/IconBallonContainer/IconBalloonContainer';
 
 import './Contact.scss';
@@ -12,7 +11,7 @@ export default function Contact(props){
   })
   return(
     <section id="contact" className={`contact ${didLoad ? 'contact--normal' : ''}`} ref={contact}>
-      <img className="contact__background" src={city} alt="toronto skyline"/>
+      <div className="contact__overlay"></div>
       <IconBalloonContainer />
     </section>
   );
