@@ -1,17 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import PacmanLoader from "react-spinners/PacmanLoader";
+import Modal from 'react-modal';
 import myPic from '../../assets/images/me.jpg';
 import FatBird from '../../components/FatBird/FatBird';
 import cloud from '../../assets/images/cloud.png';
 import './AboutMe.scss';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    width                 : '90%',
+    maxWidth              : '500px'
+  }
+};
+ 
+Modal.setAppElement('#root')
 
 export default function Projects(props){
   const [testimonials, setTestimonials] = useState([]);
   const [didLoad, setDidLoad] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
+ 
+   
   useEffect(()=>{
     if (!testimonials.length){
       axios.get('https://cors-anywhere.herokuapp.com/https://johnraymartinez.herokuapp.com/api/testimonials')
@@ -25,12 +41,42 @@ export default function Projects(props){
   }, [testimonials.length])
 
   useEffect(()=>{
-    if (!didLoad)
-      setTimeout(()=>setDidLoad(true),200);
+    if (!didLoad) setTimeout(()=>setDidLoad(true),100)
   }, [didLoad])
 
+  const formHandler = e => {
+    e.preventDefault();
+    const {author, company, position, headline, message } = e.target;
+    author.classList.remove('about-me__form--right-invalid');
+    headline.classList.remove('about-me__form--right-invalid');
+    message.classList.remove('about-me__form--right-invalid-textarea');
+    if (author.length && headline.length && message.length){
+      const obj = {
+        author: author.value, 
+        company: company.value,
+        position: position.value,
+        headline: headline.value,
+        message: message.value
+      }
+      axios.post('https://cors-anywhere.herokuapp.com/https://johnraymartinez.herokuapp.com/api/testimonials', obj)
+      .then(res=>{
+        e.target.reset();
+      })
+      .catch(err=>console.log(err)) 
+    } else {
+      if (!author.value.length) setInvalid(author)
+      if (!headline.value.length) setInvalid(headline)
+      if (!message.value.length) setInvalid(message, 'about-me__form--right-invalid-textarea')
+    }
+  }
+  const hideModal = () => setShowModal(false);
   const showModalHandler = () => setShowModal(true);
   const showTestimonials = () => {if (!clicked) setClicked(true)};
+  const setInvalid = (elem, newClass='about-me__form--right-invalid') => {
+      elem.classList.add('about-me__form--right-shake');
+      elem.classList.add(newClass);
+      setTimeout(()=>elem.classList.remove('about-me__form--right-shake'),250);
+  }
   const retrieveBlurb = () => {
     return clicked 
     ? "These are the things that these wonderful people said about me..." 
@@ -39,27 +85,54 @@ export default function Projects(props){
   return (
     <main id="aboutMe" className="about-me">
       <section className={`about-me__bio  ${didLoad ? 'about-me__bio--normal' : ''} ${clicked ? 'about-me__bio--bottom' : ''}`}>
-      {testimonials.length
-      ? <>
-          <div className="about-me__box">
-            <FatBird 
-              handler={showTestimonials} 
-              speech={clicked ? testimonials : "Hello there! Want to see what people say about me?"} 
-              showModalHandler={showModalHandler}
-            />
-            <div className="about-me__img-container">
-              <img className="about-me__img" src={myPic} alt="handsome young man"/>
-            </div>
-            <div className="about-me__bio-blurb">
-              {retrieveBlurb()}
-            </div>
-          </div> 
-          {showModal && (
-            <h1>hello</h1>
-          )}
-        </>
-      : <div className="about-me__loader"><PacmanLoader color="white" /></div>
-      }
+        <div className="about-me__box">
+          <FatBird 
+            handler={showTestimonials} 
+            speech={clicked ? testimonials : "Hello there! Want to see what people say about me?"} 
+            showModalHandler={showModalHandler}
+          />
+          <div className="about-me__img-container">
+            <img className="about-me__img" src={myPic} alt="handsome young man"/>
+          </div>
+          <div className="about-me__bio-blurb">
+            {retrieveBlurb()}
+          </div>
+        </div> 
+        {showModal && (
+          <Modal
+            isOpen={showModal}
+            onRequestClose={hideModal}
+            style={customStyles}
+            contentLabel="Add Testimonials"
+          >
+            <h2>Add Testimonial</h2>
+            <form className="about-me__form" onSubmit={formHandler}>
+              <div className="about-me__form-row">
+                <label className="about-me__form--left" htmlFor="author">Author<span className="red">*</span> </label>
+                <input className="about-me__form--right" type="text" name="author" />  
+              </div>
+              <div className="about-me__form-row">
+                <label className="about-me__form--left" htmlFor="company">Company </label> 
+                <input className="about-me__form--right"type="text" name="company" />
+              </div>
+              <div className="about-me__form-row">
+                <label className="about-me__form--left"  htmlFor="position">Position </label>
+                <input className="about-me__form--right"type="text" name="position" />
+              </div>
+              <div className="about-me__form-row">
+                <label className="about-me__form--left"  htmlFor="headline">Headline<span className="red">*</span> </label>
+                <input className="about-me__form--right" type="text" name="headline" />
+              </div>
+              <div className="about-me__form-row">
+                <label className="about-me__form--label about-me__form--left"  htmlFor="message">Message<span className="red">*</span> </label>
+                <textarea className="about-me__form--textarea about-me__form--right" name="message" ></textarea>
+              </div>
+              <div className="about-me__form-row about-me__form-row--button">
+                <button className="about-me__form-submit">SUBMIT</button>
+              </div>
+            </form>
+          </ Modal>
+        )}
       </section>
       <>
         <img className="sky__cloud" src={cloud} alt="cloud"/>

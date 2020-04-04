@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PulseLoader from "react-spinners/PulseLoader";
 import { faArrowLeft, faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 import './SpeechBubble.scss';
 
@@ -39,22 +40,29 @@ export default function SpeechBubble({speech, handler, showModalHandler}){
     return(
       <div className="speech-bubble">
         <div className="speech-bubble__blurb">
-          <h5 className="speech-bubble__blurb-headline">{`${speech[line].headline}`}</h5>
-          <p className="speech-bubble__blurb-message">
-            {`"${speech[line].message}"`}
-          </p>
-          <p className="speech-bubble__author">
-            {`${speech[line].author}${speech[line].company ? `, ${speech[line].company}` : ''}`} <br/>
-            {` ${speech[line].position}`}
-          </p>
-          <div className="speech-bubble__button-container">
-            <span className="speech-bubble__arrow-button" onClick={getPreviousMessage}>
-              <FontAwesomeIcon icon={faArrowLeft} />  
-            </span>
-            <span className="speech-bubble__arrow-button" onClick={getNextMessage}>
-              <FontAwesomeIcon icon={faArrowRight} />
-            </span>
-          </div>
+          { speech.length 
+          ? (
+            <>
+              <h5 className="speech-bubble__blurb-headline">{`${speech[line].headline}`}</h5>
+              <p className="speech-bubble__blurb-message">
+                {`"${speech[line].message}"`}
+              </p>
+              <p className="speech-bubble__author">
+                {`${speech[line].author}${speech[line].company ? `, ${speech[line].company}` : ''}`} <br/>
+                {` ${speech[line].position}`}
+              </p>
+              <div className="speech-bubble__button-container">
+                <span className="speech-bubble__arrow-button" onClick={getPreviousMessage}>
+                  <FontAwesomeIcon icon={faArrowLeft} />  
+                </span>
+                <span className="speech-bubble__arrow-button" onClick={getNextMessage}>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </span>
+              </div>
+            </>
+          )
+          : <PulseLoader size="10" color="black" />
+        }
         </div>
         <div className="speech-bubble__arrow"></div>
         <div className="speech-bubble__call-to-action" onClick={showModalHandler}>

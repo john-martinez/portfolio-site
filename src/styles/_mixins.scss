@@ -73,6 +73,13 @@
   animation-iteration-count: infinite;
   animation: move3 10s linear infinite 3s, fadein2 2s forwards 1s, fill3 3s forwards 3s;
 }
+
+@mixin shake {
+  animation-name: shake;
+  animation-duration: .2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
 // breakpoints
 
 @mixin tablet {
