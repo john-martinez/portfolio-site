@@ -4,7 +4,7 @@ import fatBird from '../../assets/images/fatbird.png';
 import eye from '../../assets/images/eye.png';
 import './FatBird.scss';
 
-export default function FatBird({speech, handler, showModalHandler}){
+export default function FatBird({speech, handler, showModalHandler }){
   return(
     <div className="fatbird">
       <SpeechBubble speech={speech} handler={handler} showModalHandler={showModalHandler} />

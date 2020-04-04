@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PulseLoader from "react-spinners/PulseLoader";
 import axios from 'axios';
 import Modal from 'react-modal';
 import myPic from '../../assets/images/me.jpg';
@@ -26,6 +27,8 @@ export default function Projects(props){
   const [didLoad, setDidLoad] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [waiting, setWaiting] = useState(false);
+  const [success, setSuccess] = useState(false);
  
    
   useEffect(()=>{
@@ -44,13 +47,22 @@ export default function Projects(props){
     if (!didLoad) setTimeout(()=>setDidLoad(true),100)
   }, [didLoad])
 
+  useEffect(()=>{
+    if (success) {
+      setTimeout(()=>{
+        setSuccess(false);
+        setShowModal(false);
+      },3000)
+    }
+  },[success])
+
   const formHandler = e => {
     e.preventDefault();
     const {author, company, position, headline, message } = e.target;
     author.classList.remove('about-me__form--right-invalid');
     headline.classList.remove('about-me__form--right-invalid');
     message.classList.remove('about-me__form--right-invalid-textarea');
-    if (author.length && headline.length && message.length){
+    if (author.value.length && headline.value.length && message.value.length){
       const obj = {
         author: author.value, 
         company: company.value,
@@ -60,9 +72,11 @@ export default function Projects(props){
       }
       axios.post('https://cors-anywhere.herokuapp.com/https://johnraymartinez.herokuapp.com/api/testimonials', obj)
       .then(res=>{
-        e.target.reset();
+        setSuccess(true);
+        setWaiting(false);
       })
       .catch(err=>console.log(err)) 
+      setWaiting(true);
     } else {
       if (!author.value.length) setInvalid(author)
       if (!headline.value.length) setInvalid(headline)
@@ -90,6 +104,7 @@ export default function Projects(props){
             handler={showTestimonials} 
             speech={clicked ? testimonials : "Hello there! Want to see what people say about me?"} 
             showModalHandler={showModalHandler}
+            waiting={waiting}
           />
           <div className="about-me__img-container">
             <img className="about-me__img" src={myPic} alt="handsome young man"/>
@@ -105,32 +120,39 @@ export default function Projects(props){
             style={customStyles}
             contentLabel="Add Testimonials"
           >
-            <h2>Add Testimonial</h2>
-            <form className="about-me__form" onSubmit={formHandler}>
-              <div className="about-me__form-row">
-                <label className="about-me__form--left" htmlFor="author">Author<span className="red">*</span> </label>
-                <input className="about-me__form--right" type="text" name="author" />  
-              </div>
-              <div className="about-me__form-row">
-                <label className="about-me__form--left" htmlFor="company">Company </label> 
-                <input className="about-me__form--right"type="text" name="company" />
-              </div>
-              <div className="about-me__form-row">
-                <label className="about-me__form--left"  htmlFor="position">Position </label>
-                <input className="about-me__form--right"type="text" name="position" />
-              </div>
-              <div className="about-me__form-row">
-                <label className="about-me__form--left"  htmlFor="headline">Headline<span className="red">*</span> </label>
-                <input className="about-me__form--right" type="text" name="headline" />
-              </div>
-              <div className="about-me__form-row">
-                <label className="about-me__form--label about-me__form--left"  htmlFor="message">Message<span className="red">*</span> </label>
-                <textarea className="about-me__form--textarea about-me__form--right" name="message" ></textarea>
-              </div>
-              <div className="about-me__form-row about-me__form-row--button">
-                <button className="about-me__form-submit">SUBMIT</button>
-              </div>
-            </form>
+            {!waiting 
+              ? success 
+                ? <h2>Thank you, your testimonial has been sent for review!</h2>
+                : (<>
+              <h2>Add Testimonial</h2>
+              <form className="about-me__form" onSubmit={formHandler}>
+                <div className="about-me__form-row">
+                  <label className="about-me__form--left" htmlFor="author">Author<span className="red">*</span> </label>
+                  <input className="about-me__form--right" type="text" name="author" />  
+                </div>
+                <div className="about-me__form-row">
+                  <label className="about-me__form--left" htmlFor="company">Company </label> 
+                  <input className="about-me__form--right"type="text" name="company" />
+                </div>
+                <div className="about-me__form-row">
+                  <label className="about-me__form--left"  htmlFor="position">Position </label>
+                  <input className="about-me__form--right"type="text" name="position" />
+                </div>
+                <div className="about-me__form-row">
+                  <label className="about-me__form--left"  htmlFor="headline">Headline<span className="red">*</span> </label>
+                  <input className="about-me__form--right" type="text" name="headline" />
+                </div>
+                <div className="about-me__form-row">
+                  <label className="about-me__form--label about-me__form--left"  htmlFor="message">Message<span className="red">*</span> </label>
+                  <textarea className="about-me__form--textarea about-me__form--right" name="message" ></textarea>
+                </div>
+                <div className="about-me__form-row about-me__form-row--button">
+                  <button className="about-me__form-submit">SUBMIT</button>
+                </div>
+              </form>
+              </>)
+              : <PulseLoader size="10px" color="black" />
+            }
           </ Modal>
         )}
       </section>
