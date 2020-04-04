@@ -11,7 +11,7 @@ export default withRouter(function Banner(props){
   return(
     <header className={`banner ${bannerColor}`}>
       <div className={`banner__logo-container ${props.location.pathname === '/' ? '' : `banner__logo-container--right`}`}>
-        <img className="banner__logo" src={logoWhite} alt="story delivering a baby" onClick={()=>props.history.push('/')} />
+        <img className="banner__logo" src={logoWhite} alt="stork delivering a baby" onClick={()=>props.history.push('/')} />
       </div>
       <div className="banner__links">
         <Link className={`${props.location.pathname === '/' ? 'banner__links--active' : ''} `} to="/" ><FontAwesomeIcon icon={faHome} /></Link>
