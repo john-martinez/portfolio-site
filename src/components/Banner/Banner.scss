@@ -29,6 +29,7 @@
     width: 100%;
     text-align: right;
     margin-left: 10px;
+    * { transition: none !important; }
     &--black { color: $font-color1  !important; border: 1px solid $font-color1 !important}
     &--active { background-color: orange !important}
     

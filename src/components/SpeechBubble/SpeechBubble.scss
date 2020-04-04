@@ -38,6 +38,19 @@
       }
     }
   }
+  &__call-to-action {
+    position: absolute;
+    transition: .2s linear !important;
+    font-size: 0.8rem;
+    cursor: pointer;
+    bottom: -20px;
+    right: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: orange;
+    &:hover { background-color: black; color: orange}
+    * {transition: none !important; }
+  }
   &__author { font-size: 0.8rem; margin: 3px 0 }
   &__button {
     display: block;
@@ -75,6 +88,7 @@
         font-size: 1rem;
       }
     }
+    &__call-to-action { font-size: 1rem }
     &__author { font-size: 1.15rem }
   }
 }

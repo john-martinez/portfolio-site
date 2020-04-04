@@ -10,6 +10,7 @@ export default function Projects(props){
   const [testimonials, setTestimonials] = useState([]);
   const [didLoad, setDidLoad] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(()=>{
     if (!testimonials.length){
@@ -28,6 +29,7 @@ export default function Projects(props){
       setTimeout(()=>setDidLoad(true),200);
   }, [didLoad])
 
+  const showModalHandler = () => setShowModal(true);
   const showTestimonials = () => {if (!clicked) setClicked(true)};
   const retrieveBlurb = () => {
     return clicked 
@@ -38,15 +40,24 @@ export default function Projects(props){
     <main id="aboutMe" className="about-me">
       <section className={`about-me__bio  ${didLoad ? 'about-me__bio--normal' : ''} ${clicked ? 'about-me__bio--bottom' : ''}`}>
       {testimonials.length
-      ? <div className="about-me__box">
-            <FatBird handler={showTestimonials} speech={clicked ? testimonials : "Hello there! Want to see what people say about me?"} />
+      ? <>
+          <div className="about-me__box">
+            <FatBird 
+              handler={showTestimonials} 
+              speech={clicked ? testimonials : "Hello there! Want to see what people say about me?"} 
+              showModalHandler={showModalHandler}
+            />
             <div className="about-me__img-container">
               <img className="about-me__img" src={myPic} alt="handsome young man"/>
             </div>
             <div className="about-me__bio-blurb">
               {retrieveBlurb()}
             </div>
-        </div> 
+          </div> 
+          {showModal && (
+            <h1>hello</h1>
+          )}
+        </>
       : <div className="about-me__loader"><PacmanLoader color="white" /></div>
       }
       </section>

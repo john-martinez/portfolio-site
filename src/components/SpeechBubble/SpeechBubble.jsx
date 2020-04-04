@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 import './SpeechBubble.scss';
 
-export default function SpeechBubble({speech, handler}){
+export default function SpeechBubble({speech, handler, showModalHandler}){
   const [line, setLine] = useState(0);
   useEffect(()=>{
     if (typeof speech !== "string"){
@@ -57,6 +57,9 @@ export default function SpeechBubble({speech, handler}){
           </div>
         </div>
         <div className="speech-bubble__arrow"></div>
+        <div className="speech-bubble__call-to-action" onClick={showModalHandler}>
+          <FontAwesomeIcon icon={faPlus} /> Add Testimonial
+        </div>
       </div>
     );
   }
