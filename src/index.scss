@@ -1,6 +1,7 @@
 * { box-sizing: border-box; scroll-behavior: smooth; transition: .3s ease-in-out }
 html {
   overflow-x: hidden;
+  max-height: 100vh;
 }
 body {
   margin: 0;
