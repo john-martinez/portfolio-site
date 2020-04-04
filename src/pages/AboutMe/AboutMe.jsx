@@ -146,7 +146,8 @@ export default function Projects(props){
                   <label className="about-me__form--label about-me__form--left"  htmlFor="message">Message<span className="red">*</span> </label>
                   <textarea className="about-me__form--textarea about-me__form--right" name="message" ></textarea>
                 </div>
-                <div className="about-me__form-row about-me__form-row--button">
+                <div className="about-me__form-row">
+                  <div className="about-me__form--left"></div>
                   <button className="about-me__form-submit">SUBMIT</button>
                 </div>
               </form>
