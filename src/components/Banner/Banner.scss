@@ -45,4 +45,11 @@
   @include tablet {
     &__links { text-align: left }
   }
+  @include desktop {
+    &__links {
+      > * {
+        margin: 20px;
+      }
+    }
+  }
 }

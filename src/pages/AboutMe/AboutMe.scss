@@ -58,4 +58,9 @@
       }
     }
   }
+  @include desktop {
+    &__box {
+      max-width: 700px;
+    }
+  }
 }

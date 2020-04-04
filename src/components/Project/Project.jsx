@@ -7,19 +7,17 @@ export default function Project({project}){
   const demoHandler = () => window.open(project.demoLink, '_blank');
   return(
     <div id="project" className="project" >
-      <div className="project__left" onClick={linkHandler} >
+      <div className="project__left" >
         <Carousel 
         showThumbs={false} 
         autoPlay={true} 
         infiniteLoop={true} 
         showIndicators={false} 
         interval={5000}
-        showArrows={false}
-        swipeable={false}
         >
           {project.photos.map((item,i)=>(
             <div key={i} className="project__carousel-item">
-              <img className="project__carousel-image" src={item} />
+              <img className="project__carousel-image" src={item} alt="game screenshot on desktop" />
             </div>
           ))}
         </Carousel>

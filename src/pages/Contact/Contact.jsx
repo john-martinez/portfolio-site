@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import TraverseButton from '../../components/TraverseButton/TraverseButton';
 import city from '../../assets/images/toronto.png';
 import IconBalloonContainer from '../../components/IconBallonContainer/IconBalloonContainer';
 

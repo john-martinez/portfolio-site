@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import TraverseButton from '../../components/TraverseButton/TraverseButton';
 import ProjectsList from '../../components/ProjectsList/ProjectsList';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Projects.scss';
