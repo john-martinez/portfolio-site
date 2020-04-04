@@ -94,7 +94,7 @@ export default function Projects(props){
   const retrieveBlurb = () => {
     return clicked 
     ? "These are the things that these wonderful people said about me..." 
-    : "Hi! My name is John Ray and I am a Web Developer. I enjoy and love programming in general but during the past year, I was attracted to Web Development and decided to pursue it as a career. My spirit animal is a stork because I treat all of my projects like babies and I try my hardest to deliver."
+    : "Hi! My name is John Ray and I am a Web Developer. I enjoy and love programming in general but during the past year, I was attracted to Web Development and decided to pursue it as a career. My spirit animal is a stork because I treat all of my projects like babies and I try my best to deliver."
   }
   return (
     <main id="aboutMe" className="about-me">

@@ -29,7 +29,7 @@ export default function SpeechBubble({speech, handler, showModalHandler }){
       <div className="speech-bubble">
         <div className="speech-bubble__blurb">
           <h4 className="speech-bubble__blurb-headline">Hello Visitor!</h4>
-          <span>Are you interested at what people are saying about John Ray?</span>
+          <span>Are you interested in what people are saying about John Ray?</span>
           <button className="speech-bubble__button" onClick={handler}>Yes</button>
         </div>
         <div className="speech-bubble__arrow"></div>
