@@ -13,6 +13,7 @@ import bttw2 from '../../assets/images/bttw2.png';
 import bttw3 from '../../assets/images/bttw3.png';
 import ca1 from '../../assets/images/ca1.png';
 import ca2 from '../../assets/images/ca2.png';
+import fb1 from '../../assets/images/fb-icon.png';
 import './ProjectsList.scss';
 
 export default function ProjectsList(){
@@ -25,6 +26,7 @@ export default function ProjectsList(){
         <FontAwesomeIcon icon={faReact}/>, 
         <FontAwesomeIcon icon={faSass}/>
       ],
+      otherTech: [],
       link: "https://subergame.netlify.com/",
       photos: [suber1,suber2,suber3,suber4,suber5,suber6],
       construction: false,
@@ -38,6 +40,7 @@ export default function ProjectsList(){
         <FontAwesomeIcon icon={faReact}/>, 
         <FontAwesomeIcon icon={faSass}/>
       ],
+      otherTech: [],
       link: "https://bttweather.netlify.com/",
       construction: false,
       photos: [bttw1,bttw2,bttw3]
@@ -50,9 +53,11 @@ export default function ProjectsList(){
         <FontAwesomeIcon icon={faReact}/>, 
         <FontAwesomeIcon icon={faSass}/>
       ],
+      otherTech: [fb1],
       link: "https://chat-app-22717.web.app/",
       construction: true,
-      photos: [ca1,ca2]
+      photos: [ca1,ca2],
+      
     }
   ]
   return(

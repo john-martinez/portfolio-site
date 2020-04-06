@@ -25,7 +25,8 @@ export default function Project({project}){
       <div className="project__right">
         <strong className="project__title">{project.name}</strong> <br/>
         <span className="project__blurb">{project.description}</span> <br/>
-        {project.tech.map((item,i)=><span key={i} className="project__tech">{item}</span>)} <br/>
+        {project.tech.map((item,i)=><span key={i} className="project__tech">{item}</span>)}
+        {project.otherTech.map((item,i)=><img key={i} className="project__tech-img" src={item} />)} <br/>
         <button className="project__button" onClick={linkHandler}>SITE</button>
           {project.demoLink ? <button className="project__button--blue" onClick={demoHandler}>DEMO REEL</button> : '' }
           {project.construction ?  <button className="project__button--gray" disabled>Building</button> : '' }
