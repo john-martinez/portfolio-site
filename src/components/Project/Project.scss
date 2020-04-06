@@ -81,6 +81,14 @@
       border: 1px solid purple;
       background-color: unset;
     }
+    &--gray { 
+      @extend .project__button;
+      background-color: #afafaf;
+      color: #fafafa;
+      border: none;
+      &:hover {background-color: #afafaf; color: #fafafa; border: none}
+      
+    }
   }
 }
 

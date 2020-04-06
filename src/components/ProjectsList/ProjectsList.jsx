@@ -11,6 +11,8 @@ import suber6 from '../../assets/images/suber6.png';
 import bttw1 from '../../assets/images/bttw1.png';
 import bttw2 from '../../assets/images/bttw2.png';
 import bttw3 from '../../assets/images/bttw3.png';
+import ca1 from '../../assets/images/ca1.png';
+import ca2 from '../../assets/images/ca2.png';
 import './ProjectsList.scss';
 
 export default function ProjectsList(){
@@ -25,6 +27,7 @@ export default function ProjectsList(){
       ],
       link: "https://subergame.netlify.com/",
       photos: [suber1,suber2,suber3,suber4,suber5,suber6],
+      construction: false,
       demoLink: "https://www.loom.com/share/c3b15d35e7874d2e8ec41575a4e7a229"
     },
     {
@@ -36,7 +39,20 @@ export default function ProjectsList(){
         <FontAwesomeIcon icon={faSass}/>
       ],
       link: "https://bttweather.netlify.com/",
+      construction: false,
       photos: [bttw1,bttw2,bttw3]
+    },
+    {
+      name: "Untitled Chat-app",
+      description: "A looking for group chat app that can be used by people to connect to other people with the same interests. ",
+      tech: [
+        <FontAwesomeIcon icon={faNode}/>, 
+        <FontAwesomeIcon icon={faReact}/>, 
+        <FontAwesomeIcon icon={faSass}/>
+      ],
+      link: "https://chat-app-22717.web.app/",
+      construction: true,
+      photos: [ca1,ca2]
     }
   ]
   return(
