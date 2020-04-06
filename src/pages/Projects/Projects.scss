@@ -6,6 +6,14 @@
   width: 100vw;
   transform: translateX(100%);
 
+  &__arrow {
+    filter: opacity(0);
+    @include arrowBounce;
+    position: relative;
+    top: 150px;
+    font-size: 5rem;
+    cursor: pointer;
+  }
   &__fade-in {
     filter: opacity(0);
     font-size: 3rem;

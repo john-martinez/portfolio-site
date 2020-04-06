@@ -50,6 +50,9 @@
   @content;
 }
 
+@mixin arrowBounce {
+  animation: fadein 1s ease-in-out forwards 4s, bounce 1s ease-in infinite 4.1s;
+}
 @mixin move {
   animation-name: move;
   animation-duration: 10s;
