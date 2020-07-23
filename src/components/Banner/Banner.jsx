@@ -22,10 +22,22 @@ export default withRouter(function Banner(props){
         <img className="banner__logo" src={logoContainer} alt="stork delivering a baby" onClick={()=>props.history.push('/')} />
       </div>
       <div className="banner__links">
-        <Link className={`${props.location.pathname === '/' ? 'banner__links--active' : ''} ${baseColor}`} to="/" ><FontAwesomeIcon icon={faHome} /></Link>
-        <Link className={`${props.location.pathname === '/projects' ? 'banner__links--active' : ''} ${baseColor}`} to="/projects"><FontAwesomeIcon icon={faBriefcase} /></Link>
-        <Link className={`${props.location.pathname === '/about' ? 'banner__links--active' : ''} ${baseColor}`} to="/about"><FontAwesomeIcon icon={faAddressCard} /></Link>
-        <Link className={`${props.location.pathname === '/contact' ? 'banner__links--active' : ''} ${baseColor}`} to="/contact"><FontAwesomeIcon icon={faPhone} /></Link>
+        <Link className={`${props.location.pathname === '/' ? 'banner__links--active' : ''} ${baseColor}`} to="/" >
+          <FontAwesomeIcon icon={faHome} /> 
+          <span className="banner__link-name">Home</span>
+        </Link>
+        <Link className={`${props.location.pathname === '/projects' ? 'banner__links--active' : ''} ${baseColor}`} to="/projects">
+          <FontAwesomeIcon icon={faBriefcase} />
+          <span className="banner__link-name">Projects</span>
+        </Link>
+        <Link className={`${props.location.pathname === '/about' ? 'banner__links--active' : ''} ${baseColor}`} to="/about">
+          <FontAwesomeIcon icon={faAddressCard} />
+          <span className="banner__link-name">About Me</span>
+        </Link>
+        <Link className={`${props.location.pathname === '/contact' ? 'banner__links--active' : ''} ${baseColor}`} to="/contact">
+          <FontAwesomeIcon icon={faPhone} />
+          <span className="banner__link-name">Contact</span>
+        </Link>
       </div>
     </header>
   );

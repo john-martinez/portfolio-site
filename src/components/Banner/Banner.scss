@@ -6,6 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   position: fixed;
+  padding: 7px 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -53,6 +54,13 @@
       } 
     }
   }
+
+  &__link-name {
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 2px;
+  }
+
   @include tablet {
     &__links { text-align: left; margin-left: 30px }
   }
