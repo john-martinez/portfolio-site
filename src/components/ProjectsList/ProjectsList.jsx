@@ -8,11 +8,11 @@ import suber3 from '../../assets/images/suber3.png';
 import suber4 from '../../assets/images/suber4.png';
 import suber5 from '../../assets/images/suber5.png';
 import suber6 from '../../assets/images/suber6.png';
-import bttw1 from '../../assets/images/bttw1.png';
-import bttw2 from '../../assets/images/bttw2.png';
-import bttw3 from '../../assets/images/bttw3.png';
-import ca1 from '../../assets/images/ca1.png';
-import ca2 from '../../assets/images/ca2.png';
+import bttw1 from '../../assets/images/bttw1.jpg';
+import bttw2 from '../../assets/images/bttw2.jpg';
+import bttw3 from '../../assets/images/bttw3.jpg';
+import ca1 from '../../assets/images/ca1.jpg';
+import ca2 from '../../assets/images/ca2.jpg';
 import fb1 from '../../assets/images/fb-icon.png';
 import './ProjectsList.scss';
 
